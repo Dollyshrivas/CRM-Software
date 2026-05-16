@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #eef2ff, #dbeafe);
+}
+
+.crud-container {
+  width: 85%;
+  margin: 50px auto;
+  padding: 35px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+}
+
+.crud-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #1e3a8a;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.crud-form {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+}
+
+.crud-form input {
+  padding: 14px 16px;
+  width: 240px;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  outline: none;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.crud-form input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 8px rgba(37,99,235,0.25);
+}
+
+.crud-form button {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.crud-form button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(37,99,235,0.3);
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 16px;
+  background: white;
+  min-width: 600px;
+}
+
+table button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin-right: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+table button:last-child {
+  margin-right: 0;
+}
+
+table button:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 900px) {
+  .crud-container {
+    width: 95%;
+    padding: 24px 20px;
+  }
+
+  .crud-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .crud-form input,
+  .crud-form button {
+    width: 100%;
+  }
+
+  .table-wrapper {
+    margin-top: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .crud-container {
+    padding: 18px 16px;
+  }
+
+  table {
+    min-width: 100%;
+  }
+
+  td,
+  th {
+    padding: 12px;
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 16px;
+  background: white;
+}
+
+th {
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+}
+
+td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 15px;
+}
+
+tr:hover td {
+  background: #f8fafc;
+}
+
+.edit-btn {
+  background: #f59e0b;
+  border: none;
+  padding: 9px 16px;
+  margin-right: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.delete-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 9px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
